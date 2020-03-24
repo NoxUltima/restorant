@@ -1,0 +1,7 @@
+UPDATE restorant.RESTAURANT m INNER JOIN (SELECT restoID, COUNT(reviewRating) AS rating1 FROM restorant.REVIEW r WHERE CEILING(reviewRating) = 1 GROUP BY restoID) r ON m.restoID = r.restoID SET m.rating1 = r.rating1;
+UPDATE restorant.RESTAURANT m INNER JOIN (SELECT restoID, COUNT(reviewRating) AS rating2 FROM restorant.REVIEW r WHERE CEILING(reviewRating) = 2 GROUP BY restoID) r ON m.restoID = r.restoID SET m.rating2 = r.rating2;
+UPDATE restorant.RESTAURANT m INNER JOIN (SELECT restoID, COUNT(reviewRating) AS rating3 FROM restorant.REVIEW r WHERE CEILING(reviewRating) = 3 GROUP BY restoID) r ON m.restoID = r.restoID SET m.rating3 = r.rating3;
+UPDATE restorant.RESTAURANT m INNER JOIN (SELECT restoID, COUNT(reviewRating) AS rating4 FROM restorant.REVIEW r WHERE CEILING(reviewRating) = 4 GROUP BY restoID) r ON m.restoID = r.restoID SET m.rating4 = r.rating4;
+UPDATE restorant.RESTAURANT m INNER JOIN (SELECT restoID, COUNT(reviewRating) AS rating5 FROM restorant.REVIEW r WHERE CEILING(reviewRating) = 5 GROUP BY restoID) r ON m.restoID = r.restoID SET m.rating5 = r.rating5;
+UPDATE restorant.RESTAURANT m INNER JOIN (SELECT restoID, COUNT(reviewID) AS numReviews FROM restorant.REVIEW r GROUP BY restoID) r on m.restoID = r.restoID SET m.numReviews = r.numReviews;
+UPDATE restorant.RESTAURANT m INNER JOIN (SELECT restoID, TRUNCATE(AVG(reviewRating), 1) AS avgRating FROM restorant.REVIEW r GROUP BY restoID) r ON m.restoID = r.restoID SET m.avgRating = r.avgRating;
