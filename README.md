@@ -31,38 +31,40 @@ You do not need to do steps 1-5 again.
 
 ### Home Page
 
-![Nav and Carousel](screenshots/Nav%20and%20Carousel.png)
+![Nav and Carousel](screenshots/nav.png)
 
-![Index](screenshots/Index.png)
+![Index](screenshots/index.png)
 
-![Recommended](screenshots/Recommended.png)
+![Recommended](screenshots/recommended.png)
 
-![Disclaimer & Footer](screenshots/Disclaimer%20&%20Footer.png)
+![Disclaimer & Footer](screenshots/disclaimer.png)
 
 ### Search & Restaurant Pages
 
-![Search](screenshots/Search.png)
+![Search](screenshots/search.png)
 
-![Restaurant Page](screenshots/Restaurant Page.png)
+![Restaurant Page](screenshots/restaurant.png)
 
-![Gallery and Rating Stats](screenshots/Gallery and Rating Stats.png)
+![Gallery and Rating Stats](screenshots/gallery.png)
 
-![Video and Reviews](screenshots/Video and Reviews.png)
+![Video and Reviews](screenshots/video.png)
 
 ### Timeline & Account Pages
 
-![Timeline](screenshots/Timeline.png)
+![Timeline](screenshots/timeline.png)
 
-![Edit Info](screenshots/Edit Info.png)
+![Edit Info](screenshots/edit.png)
 
-![Sign Up](screenshots/Sign Up.png)
+![Sign Up](screenshots/signup.png)
 
-![Log In](screenshots/Log In.png)
+![Log In](screenshots/login.png)
 
-![Forgot Password](screenshots/Forgot Password.png)
+![Forgot Password](screenshots/forgot.png)
 
-![Reset Password](screenshots/Reset Password.png)
+![Reset Password](screenshots/reset.png)
 
 ### About Page
-![About](screenshots/About.png)
-![Walkthrough](screenshots/Walkthrough.png)
+
+![About](screenshots/about.png)
+
+![Walkthrough](screenshots/walkthrough.png)
