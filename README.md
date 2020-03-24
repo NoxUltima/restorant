@@ -27,4 +27,27 @@ You do not need to do steps 1-5 again.
 6. When you are done, go back to/open VS Code, open the Terminal and type in the command `node server.js` to start the website.
 7. Look out for the link `http://127.0.0.1:8080` (port numbers may change) and go to the browser of your choice. Happy exploring!
 
-# Screenshots
+## Screenshots
+### Home Page
+![Nav and Carousel](screenshots/Nav and Carousel.png)
+![Index](screenshots/Index.png)
+![Recommended](screenshots/Recommended.png)
+![Disclaimer](screenshots/Disclaimer.png)
+
+### Search & Restaurant Pages
+![Search](screenshots/Search.png)
+![Restaurant Page](screenshots/Restaurant Page.png)
+![Gallery and Rating Stats](screenshots/Gallery and Rating Stats.png)
+![Video and Reviews](screenshots/Video and Reviews.png)
+
+### Timeline & Account Pages
+![Timeline](screenshots/Timeline.png)
+![Edit Info](screenshots/Edit Info.png)
+![Sign Up](screenshots/Sign Up.png)
+![Log In](screenshots/Log In.png)
+![Forgot Password](screenshots/Forgot Password.png)
+![Reset Password](screenshots/Reset Password.png)
+
+### About Page
+![About](screenshots/About.png)
+![Walkthrough](screenshots/Walkthrough.png)
