@@ -28,24 +28,39 @@ You do not need to do steps 1-5 again.
 7. Look out for the link `http://127.0.0.1:8080` (port numbers may change) and go to the browser of your choice. Happy exploring!
 
 ## Screenshots
+
 ### Home Page
-![Nav and Carousel](screenshots/Nav and Carousel.png)
+
+![Nav and Carousel](screenshots/Nav%20and%20Carousel.png)
+
 ![Index](screenshots/Index.png)
+
 ![Recommended](screenshots/Recommended.png)
-![Disclaimer](screenshots/Disclaimer.png)
+
+![Disclaimer & Footer](screenshots/Disclaimer%20&%20Footer.png)
 
 ### Search & Restaurant Pages
+
 ![Search](screenshots/Search.png)
+
 ![Restaurant Page](screenshots/Restaurant Page.png)
+
 ![Gallery and Rating Stats](screenshots/Gallery and Rating Stats.png)
+
 ![Video and Reviews](screenshots/Video and Reviews.png)
 
 ### Timeline & Account Pages
+
 ![Timeline](screenshots/Timeline.png)
+
 ![Edit Info](screenshots/Edit Info.png)
+
 ![Sign Up](screenshots/Sign Up.png)
+
 ![Log In](screenshots/Log In.png)
+
 ![Forgot Password](screenshots/Forgot Password.png)
+
 ![Reset Password](screenshots/Reset Password.png)
 
 ### About Page
