@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search</title>
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="css/util/bootstrap.css">
+    <link rel="stylesheet" href="css/util/animate.css">
+    <link rel="stylesheet" href="fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="fonts/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/api/colormind.js"></script>
+    <script src="js/api/countries.js"></script>
+    <script src="js/api/jquery.min.js"></script>
+    <script src="js/api/popper.min.js"></script>
+    <script src="js/api/bootstrap.bundle.js"></script>
+    <script src="js/api/w3.js"></script>
+    <script src="js/api/heading.js"></script>
+
+    <script src="js/search.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/restaurant.js"></script>
+    <script src="js/review.js"></script>
+    <script src="js/site.js"></script>
+</head>
+
+<body>
+    <div w3-include-html="navbar.html"></div>
+    <div class="caption v-middle text-center">
+        <h1 class="cd-headline clip">
+            <span class="blc">Discover </span>
+            <span class="cd-words-wrapper">
+                <b class="is-visible"> top restaurants</b>
+                <b> diverse cuisines</b>
+                <b> exquisite dining</b>
+            </span>
+        </h1>
+    </div>
+    <div w3-include-html="filter.html"></div>
+    <section class="py-5">
+        <div class="container">
+            <h2 id="totalRestaurants" class="text-center">dude this isn't gonna take long relax</h2>
+            <div class="row filtr-container" id="searchResults">
+                <div class="col-md-6 col-lg-4 filtr-item" data-category="2,3">
+                    <div class="card border-dark">
+                        <div class="card-header bg-dark text-light">
+                            <h5 class="m-0">CUT by Wolfgang Puck<br></h5>
+                        </div><img class="img-fluid card-img w-100 d-block rounded-0"
+                            src="images/restaurants/23/thumb.jpg">
+                        <div class="card-body">
+                            <p class="card-text">Cuisine: <strong>Local &amp; Fusion</strong></p>
+                            <p class="card-text">Establishment Type: <strong>Luxury Dining</strong><br></p>
+                            <p class="card-text">
+                                Dining: <strong>Lunch, Dinner, Reservation</strong><br></p>
+                            <p class="card-text">Opening Time: <strong>17:30:00 to 00:00:00</strong><br>
+                            </p>
+                            <p class="card-text">Address:
+                                <strong>#B1-71, Marina Bay Sands 2 Bayfront Ave, Singapore 018972</strong><br>
+                            </p>
+                            <p class="card-text">Branch: <strong>Marina Bay</strong><br></p>
+                            <p class="card-text">Average Rating: <strong>3.9</strong><br></p>
+                        </div>
+                        <div class="d-flex card-footer"><button class="btn btn-dark btn-sm" type="button"><a
+                                    href="restaurants/23.html" style="color: white !important"><i class="fa fa-eye"></i>
+                                    View</a></button><button class="btn btn-outline-dark btn-sm ml-auto" type="button"
+                                onclick="window.location.href = 'timeline.html';"><i class="fa fa-plus"></i> Add
+                                to Favorites</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div w3-include-html="footer.html"></div>
+</body>
+<script>
+    w3.includeHTML();
+    // Includes other HTML files in this file
+</script>
+
+</html>

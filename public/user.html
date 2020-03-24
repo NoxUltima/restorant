@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Settings</title>
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="css/util/bootstrap.css">
+    <link rel="stylesheet" href="css/util/animate.css">
+    <link rel="stylesheet" href="fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="fonts/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/api/colormind.js"></script>
+    <script src="js/api/countries.js"></script>
+    <script src="js/api/jquery.min.js"></script>
+    <script src="js/api/popper.min.js"></script>
+    <script src="js/api/bootstrap.bundle.js"></script>
+    <script src="js/api/w3.js"></script>
+    <script src="js/api/heading.js"></script>
+
+    <script src="js/search.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/restaurant.js"></script>
+    <script src="js/review.js"></script>
+    <script src="js/site.js"></script>
+</head>
+
+<body>
+    <div w3-include-html="navbar.html"></div>
+    <div class="container profile profile-view" id="profile">
+        <h1 class="display-3" style="padding-right: 10px;padding-bottom: 10px;">Account Settings</h1>
+        <div class="row">
+            <div class="col-md-12 alert-col relative">
+                <div class="alert alert-info absolue center" role="alert"><button type="button" class="close"
+                        data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button><span>Profile
+                        save with success</span></div>
+            </div>
+        </div>
+        <form method="post" onsubmit="updateInfo()">
+            <div class="form-row profile-row">
+                <div class="col-md-12">
+                    <h1><strong><em><i class="fas fa-user-edit"></i> Edit User Information</em></strong></h1>
+                    <hr>
+                    <div class="form-row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group"><span>First Name</span><input class="form-control" type="text"
+                                    name="firstName" id="editFirstName"></div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group"><span>Last Name</span><input class="form-control" type="text"
+                                    name="lastName" id="editLastName"></div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group"><span>Username</span><input class="form-control" type="text"
+                                    name="username" id="editUsername"></div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group"><span>Gender</span><select class="form-control pb-2" id="editGender"
+                                    required="">
+                                    <option value="Gender" selected="">Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group"><span>Country</span>
+                                <select class="form-control" id="editCountry" name="country">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group"><span>City</span>
+                                <select class="form-control" id="editCity" name="city">
+                                </select></div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group"><span>Address</span><input class="form-control" type="text"
+                                    name="userAddress" id="editAddress"></div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group"><span>Mobile Number<br></span><input class="form-control"
+                                    name="mobile" id="editMobile"></div>
+                        </div>
+                    </div>
+                    <div class="form-group"><span>Email </span><input class="form-control" type="email"
+                            autocomplete="off" required="" name="email" id="editEmail"></div>
+                    <div class="form-row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group"><span>Password </span><input class="form-control" type="password"
+                                    name="password" autocomplete="off" id="editPassword">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group"><span>User ID</span><input class="form-control" type="text"
+                                    name="confirmpass" id="editUserID"></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-row">
+                        <div class="col-md-12 content-right"><button class="btn btn-primary form-btn" type="submit">SAVE
+                            </button></div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <h1><strong><em>Other Settings</em></strong></h1>
+        <h4><em>Delete Account</em><button class="btn btn-primary pull-right" type="button" data-toggle="modal"
+                data-target="#deleteAccount"><i class="fas fa-user-times"></i> Delete Account</button></h4>
+        <p><strong>Deleting your account</strong> means getting <strong>all your data irrecoverably
+                lost</strong>!</p>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="deleteAccount">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"><strong><em>Delete Account</em></strong></h4><button type="button"
+                        class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <form onsubmit="deleteAccount()">
+                        <p><strong>Are you sure?</strong>&nbsp;If you proceed, <strong>all your data in this site will
+                                be
+                                irrecovably lost! </strong>Key in your <strong>user ID</strong>, <strong>username
+                            </strong>and <strong>password
+                            </strong>should you wish to leave RestoRant.</p><br>
+                        <div class="input-group">
+                            <div class="input-group-prepend"><span class="input-group-text">User ID</span></div><input
+                                class="form-control" type="text" id="deleteUserID">
+                            <div class="input-group-append"></div>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend"><span class="input-group-text">Username</span></div><input
+                                class="form-control" type="text" id="deleteUsername">
+                            <div class="input-group-append"></div>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend"><span class="input-group-text">Password</span></div><input
+                                class="form-control" type="password" id="deletePassword">
+                            <div class="input-group-append"></div>
+                        </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button"
+                        data-dismiss="modal">Close</button><button class="btn btn-primary" type="submit"><i
+                            class="fas fa-user-times"></i> Delete</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div w3-include-html="footer.html"></div>
+</body>
+<script>
+    w3.includeHTML();
+    // Includes other HTML files in this file
+
+    // Adds country and city data
+    populateCountries("editCountry", "editCity");
+</script>
+
+</html>

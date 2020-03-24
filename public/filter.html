@@ -1,0 +1,80 @@
+<div>
+    <div class="filter">
+        <form>
+            <input placeholder="Type in a restaurant or pick one or more of these dropdowns" type="search"
+                id="searchQuery"></input>
+            <button class="btn btn-primary" onclick="search()"><strong>Search</strong></button>
+            <br>
+            <select id="filterCuisine">
+                <option value="">Cuisine</option>
+                <option value="local">Local &amp; Fusion</option>
+                <option value="asian">Asian</option>
+                <option value="european">European</option>
+                <option value="others">Others</option>
+            </select>
+            <select id="filterDining">
+                <option value="">Dining</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="reservation">Reservation</option>
+                <option value="delivery">Delivery</option>
+            </select>
+            <select id="filterEstType">
+                <option value="">Est. Type</option>
+                <option value="luxury">Luxury</option>
+                <option value="fine">Fine Dining</option>
+                <option value="casual">Casual</option>
+                <option value="fast">Fast Food</option>
+            </select>
+            <select id="filterLocation">
+                <option value="">Location</option>
+                <option value="bedok">Bedok</option>
+                <option value="chinatown">Chinatown</option>
+                <option value="city hall">City Hall</option>
+                <option value="geylang">Geylang</option>
+                <option value="kallang">Kallang</option>
+                <option value="marina">Marina Bay</option>
+                <option value="newton">Newton</option>
+                <option value="orchard">Orchard</option>
+                <option value="outram">Outram</option>
+                <option value="raffles place">Raffles Place</option>
+                <option value="river valley">River Valley</option>
+                <option value="tanglin">Tanglin</option>
+                <option value="tanjong pagar">Tanjong Pagar</option>
+            </select>
+            <select id="filterCost">
+                <option value="">Cost</option>
+                <option value="cheap">Cheap</option>
+                <option value="moderate">Moderate</option>
+                <option value="expensive">Expensive</option>
+                <option value="luxury">Luxury</option>
+            </select>
+            <select id="filterRating">
+                <option value="">Rating</option>
+                <option value="1">1 Star</option>
+                <option value="2">2 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="5">5 Stars</option>
+            </select>
+            <select id="filterSortBy">
+                <option value="">Sort By</option>
+                <option value="asc_name">Increasing Name</option>
+                <option value="desc_name">Decreasing Name</option>
+                <option value="asc_cost">Increasing Cost</option>
+                <option value="desc_cost">Decreasing Cost</option>
+                <option value="asc_branch">Increasing Location</option>
+                <option value="desc_branch">Decreasing Location</option>
+                <option value="asc_cuisine">Increasing Cuisine</option>
+                <option value="desc_cuisine">Decreasing Cuisine</option>
+                <option value="asc_estType">Increasing Type</option>
+                <option value="desc_estType">Decreasing Type</option>
+                <option value="asc_avgRating">Increasing Rating</option>
+                <option value="desc_avgRating">Decreasing Rating</option>
+                <option value="asc_numReviews">Increasing # Reviews</option>
+                <option value="desc_numReviews">Decreasing # Reviews</option>
+            </select>
+        </form>
+    </div>
+</div>

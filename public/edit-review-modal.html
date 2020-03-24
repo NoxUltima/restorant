@@ -1,0 +1,100 @@
+<div class="modal fade" role="dialog" tabindex="-1" id="editReview">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Review</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                <form method="post" id="editReview" onsubmit="editReview()">
+                    <div style="padding-bottom: 18px;">Title<span style="color: red;"> *</span><br>
+                        <input type="text" id="editReviewTitle" name="title" class="form-control">
+                    </div>
+                    <div style="padding-bottom: 18px;">ID of Current Review<span style="color: red;"> *</span><br>
+                        <input type="text" id="editReviewID" name="title" class="form-control">
+                    </div>
+                    <div style="padding-bottom: 18px;">ID of Current Restaurant<span style="color: red;"> *</span><br>
+                        <input type="text" id="editRestoID" name="title" class="form-control">
+                    </div>
+                    <div style="padding-bottom: 18px;">ID of User<span style="color: red;"> *</span><br>
+                        <input type="text" id="editUserID" name="title" class="form-control">
+                    </div>
+                    <div style="padding-bottom: 18px;"><b>Ratings</b></div>
+                    <div class="row">
+                        <div class="column" style="padding: 0px 0px 0px 120px;">
+                            <div style="padding-bottom: 18px;">Food<span style="color: red;"> *</span><br>
+                                <div class="rating-system1" id="editFood">
+                                    <input type="radio" name="editFood" id="editFood5" value="5">
+                                    <label for="editFood5"></label>
+                                    <input type="radio" name="editFood" id="editFood4" value="4">
+                                    <label for="editFood4"></label>
+                                    <input type="radio" name="editFood" id="editFood3" value="3">
+                                    <label for="editFood3"></label>
+                                    <input type="radio" name="editFood" id="editFood2" value="2">
+                                    <label for="editFood2"></label>
+                                    <input type="radio" name="editFood" id="editFood1" value="1">
+                                    <label for="editFood1"></label>
+                                    <div class="text"></div>
+                                </div>
+                            </div>
+                            <div style="padding-bottom: 18px;">Ambience<span style="color: red;"> *</span><br>
+                                <div class="rating-system2" id="editService">
+                                    <input type="radio" name="editService" id="editService5" value="5">
+                                    <label for="editService5"></label>
+                                    <input type="radio" name="editService" id="editService4" value="4">
+                                    <label for="editService4"></label>
+                                    <input type="radio" name="editService" id="editService3" value="3">
+                                    <label for="editService3"></label>
+                                    <input type="radio" name="editService" id="editService2" value="2">
+                                    <label for="editService2"></label>
+                                    <input type="radio" name="editService" id="editService1" value="1">
+                                    <label for="editService1"></label>
+                                    <div class="text"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column" style="padding: 0px 0px 0px 120px;">
+                            <div style="padding-bottom: 18px;">Service<span style="color: red;"> *</span><br>
+                                <div class="rating-system3" id="editAmbience">
+                                    <input type="radio" name="editAmbience" id="editAmbience5" value="5">
+                                    <label for="editAmbience5"></label>
+                                    <input type="radio" name="editAmbience" id="editAmbience4" value="4">
+                                    <label for="editAmbience4"></label>
+                                    <input type="radio" name="editAmbience" id="editAmbience3" value="3">
+                                    <label for="editAmbience3"></label>
+                                    <input type="radio" name="editAmbience" id="editAmbience2" value="2">
+                                    <label for="editAmbience2"></label>
+                                    <input type="radio" name="editAmbience" id="editAmbience1" value="1">
+                                    <label for="editAmbience1"></label>
+                                    <div class="text"></div>
+                                </div>
+                            </div>
+                            <div style="padding-bottom: 18px;">Cost<span style="color: red;"> *</span><br>
+                                <div class="rating-system4" id="editCost">
+                                    <input type="radio" name="editCost" id="editCost5" value="5">
+                                    <label for="editCost5"></label>
+                                    <input type="radio" name="editCost" id="editCost4" value="4">
+                                    <label for="editCost4"></label>
+                                    <input type="radio" name="editCost" id="editCost3" value="3">
+                                    <label for="editCost3"></label>
+                                    <input type="radio" name="editCost" id="editCost2" value="2">
+                                    <label for="editCost2"></label>
+                                    <input type="radio" name="editCost" id="editCost1" value="1">
+                                    <label for="editCost1"></label>
+                                    <div class="text"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding-bottom: 18px;">Review<span style="color: red;"> *</span><br>
+                        <textarea id="editReviewText" style="height: auto" rows="9" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" type="submit">Done</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title id="title">Restaurant</title>
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="css/util/bootstrap.css">
+    <link rel="stylesheet" href="css/util/animate.css">
+    <link rel="stylesheet" href="fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="fonts/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/api/colormind.js"></script>
+    <script src="js/api/countries.js"></script>
+    <script src="js/api/jquery.min.js"></script>
+    <script src="js/api/popper.min.js"></script>
+    <script src="js/api/bootstrap.bundle.js"></script>
+    <script src="js/api/w3.js"></script>
+    <script src="js/api/heading.js"></script>
+
+    <script src="js/search.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/restaurant.js"></script>
+    <script src="js/review.js"></script>
+    <script src="js/site.js"></script>
+</head>
+
+<body>
+    <div w3-include-html="navbar.html"></div>
+    <header class="masthead" id="masthead">
+        <style>
+            .masthead {
+                background-image: url("https://s3-ap-southeast-1.amazonaws.com/gsblog/wp-content/uploads/2019/06/BLOG-Social-Media-Cover-6-min.png");
+                height: 300px;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            mark {
+                background-color: #ffffff
+            }
+        </style>
+        <div class="container-fluid h-100">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col text-center">
+                    <h1 class="m-0 display-4"><mark><strong id="restoName">Skai</strong></mark></h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <br>
+    <div class="container">
+        <!--div class="btn-group float-right" role="group">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#addRestaurant"><i
+                    class="fas fa-plus-circle"></i> Add Restaurant</button>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#editRestaurant"><i
+                    class="fas fa-pen-square"></i> Edit Restaurant</button>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#deleteRestaurant"><i
+                    class="fas fa-times-circle"></i> Delete Restaurant</button>
+        </div-->
+        <h1 class="text-left" style="padding: 10;padding-top: 10;padding-bottom: 10;">
+            <strong><em>Information</em></strong></h1>
+        <div class="card">
+            <div class="card-body">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="row">
+                            <div class="col">
+                                <ul class="list-unstyled fa-ul">
+                                    <li><i class="fas fa-phone fa-li"></i><span>Phone Number: <strong id="phoneNo">6431
+                                                6156</strong><br></span></li>
+                                    <li><i class="fas fa-utensils fa-li"></i><span>Cuisine: <strong id="cuisine">Local
+                                                &amp; Fusion</strong></span></li>
+                                    <li><i class="fa fa-dollar fa-li"></i><span>Cost: <strong
+                                                id="cost">Moderate</strong></span>
+                                    </li>
+                                    <li><i class="fa fa-clock-o fa-li"></i><span>Operating Hours: <strong
+                                                id="opHours">12:00:00 to
+                                                22:00:00</strong><br></span></li>
+                                    <li><i class="fa fa-glass fa-li"></i><span>Dining Options: <strong
+                                                id="diningOption">Lunch,
+                                                Dinner, Reservation</strong></span></li>
+                                    <li><i class="fa fa-shopping-bag fa-li"></i><span>Establishment Type: <strong
+                                                id="estType">
+                                                Casual Dining</strong></span></li>
+                                    <li><i class="fas fa-map-pin fa-li"></i><span>Branch: <strong id="branch">
+                                                City Hall</strong></span></li>
+                                </ul>
+                                <div class="btn-group" role="group">
+                                    <a href="callto:64316156" id="call" class="btn btn-primary"><i
+                                            class="fas fa-phone"></i> Call</a>
+                                    <a href="https://skai.sg/book-a-table/restaurant" id="order"
+                                        class="btn btn-primary"><i class="fas fa-book-open"></i>
+                                        Order</a> <a href="http://www.skai.sg" id="learnMore" class="btn btn-primary">
+                                        <i class="fa fa-mouse-pointer"></i> Learn More</a>
+                                </div>
+                                <br>
+                                <hr>
+                                <h4>Statistics
+                                    <div class="float-right" id="stars">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span></div>
+                                </h4>
+                                <ul class="list-unstyled fa-ul">
+                                    <li><i class="fas fa-comment-dots fa-li"></i><span>Reviews:
+                                            <strong id="numReviews">254</strong></span></li>
+                                    <li><i class="fas fa-thumbs-up fa-li"></i><span>Average Rating:
+                                            <strong id="avgRating">4.1</strong></span></li>
+                                </ul>
+                                <div class="row">
+                                    <!-- Styles -->
+                                    <style>
+                                        #chartdiv {
+                                            width: 100%;
+                                            height: 200px;
+                                        }
+                                    </style>
+                                    <!-- Resources -->
+                                    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+                                    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+                                    <script src="https://www.amcharts.com/lib/4/themes/material.js"></script>
+                                    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+                                    <!-- Chart code -->
+
+                                    <!-- HTML -->
+                                    <div id="chartdiv"></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <ul class="list-unstyled fa-ul">
+                                    <li><i class="fas fa-map-marked-alt fa-li"></i><span>Address: <br><strong
+                                                id="address">70/F Swissotel
+                                                The Stamford 2 Stamford Rd, Singapore 178882</strong><br></span></li>
+                                </ul>
+                                <hr>
+                                <h4>Map</h4>
+                                <iframe id="gMap"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.802167165593!2d103.85135191475392!3d1.2931528990568226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19a67e1cda67%3A0xfb3fa1440a33f1fc!2sSKAI!5e0!3m2!1sen!2ssg!4v1579500407491!5m2!1sen!2ssg"
+                                    width="600" height="450" frameborder="0" style="border:0;"
+                                    allowfullscreen=""></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <h1 class="text-left" style="padding: 10;padding-top: 10;padding-bottom: 10;">
+            <strong><em>Gallery</em></strong></h1>
+        <div class="row fbox3" id="gallery">
+            <div class="col-sm-4 d-flex justify-content-center align-items-center">
+                <a data-fancybox="gallery" id="link1" data-caption="picture 1"
+                    href="images/restaurants/50/pic1.jpg"><img class="img-fluid" id="pic1"
+                        src="images/restaurants/50/pic1.jpg" alt="picture 1"></a>
+            </div>
+            <div class="col-sm-4 d-flex justify-content-center align-items-center">
+                <a data-fancybox="gallery" id="link2" data-caption="picture 2"
+                    href="images/restaurants/50/pic2.jpg"><img class="img-fluid" id="pic2"
+                        src="images/restaurants/50/pic2.jpg" alt="picture 2"></a>
+            </div>
+            <div class="col-sm-4 d-flex justify-content-center align-items-center">
+                <a data-fancybox="gallery" id="link3" data-caption="picture 3"
+                    href="images/restaurants/50/pic3.jpg"><img class="img-fluid" id="pic3"
+                        src="images/restaurants/50/pic3.jpg" alt="picture 3"></a>
+            </div>
+        </div>
+        <br>
+        <h1 class="text-left" style="padding: 10;padding-top: 10;padding-bottom: 10;">
+            <strong><em>Video</em></strong></h1>
+        <iframe id="video" width="100%" height="640" src="https://www.youtube.com/embed/SZV94D3N1vM" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <br>
+    <div class="container">
+        <div class="btn-group float-right" role="group">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#postReview"><i
+                    class="fas fa-comment-medical"></i> Post a Review</button>
+        </div>
+        <h1>Reviews</h1>
+        <!--Still hardcoded values-->
+        <div class="container" id="restoReviews">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="images/users/1/NoxUltima.jpg" class="img img-rounded img-fluid" />
+                            <p class="text-secondary text-center">20 Feb 8:20pm</p>
+                        </div>
+                        <div class="col-md-10">
+                            <p>
+                                <a class="float-left" href="timeline.html"><i class="fas fa-user-alt"></i><strong>
+                                        NoxUltima</strong></a>
+                                <h4 class="float-right">4.8 <i class="fa fa-star"></i></h4>
+                            </p>
+                            <div class="clearfix"></div>
+                            <h3>Bro this is fire!</h3>
+                            <p>This restaurant is dope. The view, the food, the service - all of them are worth it! But
+                                not
+                                to mention the cost, since I dined there alone!</p>
+                            <h5>Ratings</h5>
+                            <div class="col-md-10">
+                                <span style="font-weight: bold">Food<div class="progress">
+                                        <div class="progress-bar bg-success float-right text-center" role="progressbar"
+                                            style="width: 100%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5">5
+                                        </div>
+                                    </div></span>
+                                <span style="font-weight: bold">Service<div class="progress">
+                                        <div class="progress-bar bg-info text-center" role="progressbar"
+                                            style="width: 100%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5">5
+                                        </div>
+                                    </div></span>
+                                <span style="font-weight: bold">Ambience<div class="progress">
+                                        <div class="progress-bar bg-warning text-center" role="progressbar"
+                                            style="width: 100%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5">5
+                                        </div>
+                                    </div></span>
+                                <span style="font-weight: bold">Cost<div class="progress">
+                                        <div class="progress-bar bg-danger text-center" role="progressbar"
+                                            style="width: 80%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5">4
+                                        </div>
+                                    </div></span>
+                            </div>
+                            <br>
+                            <h5>Pictures</h5>
+                            <div class="row fbox3">
+                                <div class="col-sm-4 d-flex justify-content-center align-items-center">
+                                    <a data-fancybox="gallery" data-caption="picture 1"
+                                        href="images/restaurants/50/pic1.jpg"><img class="img-fluid"
+                                            src="images/restaurants/50/pic1.jpg" alt="picture 1"></a>
+                                </div>
+                                <div class="col-sm-4 d-flex justify-content-center align-items-center">
+                                    <a data-fancybox="gallery" data-caption="picture 2"
+                                        href="images/restaurants/50/pic2.jpg"><img class="img-fluid"
+                                            src="images/restaurants/50/pic2.jpg" alt="picture 2"></a>
+                                </div>
+                                <div class="col-sm-4 d-flex justify-content-center align-items-center">
+                                    <a data-fancybox="gallery" data-caption="picture 3"
+                                        href="images/restaurants/50/pic3.jpg"><img class="img-fluid"
+                                            src="images/restaurants/50/pic3.jpg" alt="picture 3"></a>
+                                </div>
+                            </div>
+                            <br>
+                            <p>
+                                <button class="float-right btn btn-primary ml-2" data-toggle="modal"
+                                    data-target="#editReview"><i class="fa fa-edit"></i> Edit</button>
+                                <button class="float-right btn btn-primary" data-toggle="modal"
+                                    data-target="#deleteReview">
+                                    <i class="fa fa-times"></i> Delete</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" role="dialog" tabindex="-1" id="deleteReview">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"><strong><em>Delete Review</em></strong></h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">×</span></button>
+                </div>
+                <form onsubmit="deleteReview()">
+                    <div class="modal-body">
+                        <p>Are you sure you want to <strong>delete this review?</strong>. Key in the ID of review if you
+                            wish to proceed.</p>
+                        <div class="input-group">
+                            <div class="input-group-prepend"><span class="input-group-text">ID of Review</span></div>
+                            <input class="form-control" type="text" id="reviewDelete">
+                            <div class="input-group-append"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-light" type="button" data-dismiss="modal">Close</button>
+                        <button class="btn btn-primary" type="submit">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div w3-include-html="post-review-modal.html"></div>
+    <div w3-include-html="edit-review-modal.html"></div>
+    <div w3-include-html="footer.html"></div>
+</body>
+<script>
+    w3.includeHTML();
+    // Includes other HTML files in this file
+</script>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>All Restaurants</title>
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="css/util/bootstrap.css">
+    <link rel="stylesheet" href="css/util/animate.css">
+    <link rel="stylesheet" href="fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="fonts/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/api/colormind.js"></script>
+    <script src="js/api/countries.js"></script>
+    <script src="js/api/jquery.min.js"></script>
+    <script src="js/api/popper.min.js"></script>
+    <script src="js/api/bootstrap.bundle.js"></script>
+    <script src="js/api/w3.js"></script>
+    <script src="js/api/heading.js"></script>
+
+    <script src="js/search.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/restaurant.js"></script>
+    <script src="js/review.js"></script>
+    <script src="js/site.js"></script>
+</head>
+
+<body onload="getAllRestaurants()">
+    <div w3-include-html="navbar.html"></div>
+    <div class="caption v-middle text-center">
+        <h1 class="cd-headline clip">
+            <span class="blc">Discover </span>
+            <span class="cd-words-wrapper">
+                <b class="is-visible"> top restaurants</b>
+                <b> diverse cuisines</b>
+                <b> exquisite dining</b>
+            </span>
+        </h1>
+    </div>
+    <p class="text-center">Restaurant data and images sourced from <a
+            href="https://www.timeout.com/singapore/restaurants/the-50-best-restaurants-in-singapore">Timeout</a>,
+        <b>50</b> of which are <b>Michelin-starred!</b>
+    </p>
+    <p class="text-center">Design inspiration from <b><a href="https://www.zomato.com/singapore">Zomato</a></b>,
+        <b><a href="https://www.opentable.com">OpenTable</a></b> and <b><a href="https://www.zagat.com">Zagat</a></b>
+    </p>
+    <section class="py-5">
+        <div class="container">
+            <div class="row filtr-container" id="allRestos">
+            </div>
+        </div>
+    </section>
+    <div w3-include-html="footer.html"></div>
+</body>
+<script>
+    w3.includeHTML();
+    // Includes other HTML files in this file
+</script>
+
+</html>

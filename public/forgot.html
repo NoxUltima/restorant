@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Forgot Password</title>
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="css/util/bootstrap.css">
+    <link rel="stylesheet" href="css/util/animate.css">
+    <link rel="stylesheet" href="fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="fonts/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/api/colormind.js"></script>
+    <script src="js/api/countries.js"></script>
+    <script src="js/api/jquery.min.js"></script>
+    <script src="js/api/popper.min.js"></script>
+    <script src="js/api/bootstrap.bundle.js"></script>
+    <script src="js/api/w3.js"></script>
+    <script src="js/api/heading.js"></script>
+
+    <script src="js/search.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/restaurant.js"></script>
+    <script src="js/review.js"></script>
+    <script src="js/site.js"></script>
+</head>
+
+<body>
+    <style>
+        .login-clean {
+            background-image: url('./images/restaurants/11/pic1.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+    <div class="login-clean">
+        <form onsubmit="sendResetPass()">
+            <h2 class="sr-only">Login Form</h2>
+            <div class="illustration"><i class="fas fa-unlock-alt"></i></div>
+            <div class="form-group">
+                <h4 class="text-center"><strong>Forgot your password?</strong></h4><br>
+                <p class="text-center">Type your email below and a link will be sent to your email for you to reset your
+                    password.</p><input class="form-control" type="email" name="email" id="sendEmail"
+                    placeholder="Email">
+            </div>
+            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Send Link</button></div><a
+                class="forgot" href="login.html">Log in here.</a>
+        </form>
+    </div>
+</body>
+<script>
+    w3.includeHTML();
+    // Includes other HTML files in this file
+</script>
+
+</html>

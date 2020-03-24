@@ -1,0 +1,98 @@
+<div class="modal fade" role="dialog" tabindex="-1" id="postReview">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Post a Review</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                <form id="reviewForm" onsubmit="postReview()">
+                    <div style="padding-bottom: 18px;">Title<span style="color: red;"> *</span><br>
+                        <input type="text" id="reviewTitle" name="title" class="form-control">
+                    </div>
+                    <div style="padding-bottom: 18px;">ID of Current Restaurant<span style="color: red;"> *</span><br>
+                        <input type="text" id="reviewRestoID" name="title" class="form-control">
+                    </div>
+                    <div style="padding-bottom: 18px;">ID of User<span style="color: red;"> *</span><br>
+                        <input type="text" id="reviewUserID" name="title" class="form-control">
+                    </div>
+                    <div style="padding-bottom: 18px;"><b>Ratings</b></div>
+                    <div class="row">
+                        <div class="column" style="padding: 0px 0px 0px 120px;">
+                            <div style="padding-bottom: 18px;">Food<span style="color: red;"> *</span><br>
+                                <div class="rating-system1" id="reviewFood">
+                                    <input type="radio" name="food" id="food5" value="5">
+                                    <label for="food5"></label>
+                                    <input type="radio" name="food" id="food4" value="4">
+                                    <label for="food4"></label>
+                                    <input type="radio" name="food" id="food3" value="3">
+                                    <label for="food3"></label>
+                                    <input type="radio" name="food" id="food2" value="2">
+                                    <label for="food2"></label>
+                                    <input type="radio" name="food" id="food1" value="1">
+                                    <label for="food1"></label>
+                                    <div class="text"></div>
+                                </div>
+                            </div>
+                            <div style="padding-bottom: 18px;">Ambience<span style="color: red;"> *</span><br>
+                                <div class="rating-system2" id="reviewService">
+                                    <input type="radio" name="service" id="service5" value="5">
+                                    <label for="service5"></label>
+                                    <input type="radio" name="service" id="service4" value="4">
+                                    <label for="service4"></label>
+                                    <input type="radio" name="service" id="service3" value="3">
+                                    <label for="service3"></label>
+                                    <input type="radio" name="service" id="service2" value="2">
+                                    <label for="service2"></label>
+                                    <input type="radio" name="service" id="service1" value="1">
+                                    <label for="service1"></label>
+                                    <div class="text"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column" style="padding: 0px 0px 0px 120px;">
+                            <div style="padding-bottom: 18px;">Service<span style="color: red;"> *</span><br>
+                                <div class="rating-system3" id="reviewAmbience">
+                                    <input type="radio" name="ambience" id="ambience5" value="5">
+                                    <label for="ambience5"></label>
+                                    <input type="radio" name="ambience" id="ambience4" value="4">
+                                    <label for="ambience4"></label>
+                                    <input type="radio" name="ambience" id="ambience3" value="3">
+                                    <label for="ambience3"></label>
+                                    <input type="radio" name="ambience" id="ambience2" value="2">
+                                    <label for="ambience2"></label>
+                                    <input type="radio" name="ambience" id="ambience1" value="1">
+                                    <label for="ambience1"></label>
+                                    <div class="text"></div>
+                                </div>
+                            </div>
+                            <div style="padding-bottom: 18px;">Cost<span style="color: red;"> *</span><br>
+                                <div class="rating-system4" id="reviewCost">
+                                    <input type="radio" name="cost" id="cost5" value="5">
+                                    <label for="cost5"></label>
+                                    <input type="radio" name="cost" id="cost4" value="4">
+                                    <label for="cost4"></label>
+                                    <input type="radio" name="cost" id="cost3" value="3">
+                                    <label for="cost3"></label>
+                                    <input type="radio" name="cost" id="cost2" value="2">
+                                    <label for="cost2"></label>
+                                    <input type="radio" name="cost" id="cost1" value="1">
+                                    <label for="cost1"></label>
+                                    <div class="text"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding-bottom: 18px;">Review<span style="color: red;"> *</span><br>
+                        <textarea id="reviewText" name="data_8" style="height: auto" rows="9"
+                            class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

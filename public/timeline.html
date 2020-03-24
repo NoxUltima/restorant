@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Timeline</title>
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="css/util/bootstrap.css">
+    <link rel="stylesheet" href="css/util/animate.css">
+    <link rel="stylesheet" href="fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="fonts/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/api/colormind.js"></script>
+    <script src="js/api/countries.js"></script>
+    <script src="js/api/jquery.min.js"></script>
+    <script src="js/api/popper.min.js"></script>
+    <script src="js/api/bootstrap.bundle.js"></script>
+    <script src="js/api/w3.js"></script>
+    <script src="js/api/heading.js"></script>
+
+    <script src="js/search.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/restaurant.js"></script>
+    <script src="js/review.js"></script>
+    <script src="js/site.js"></script>
+</head>
+
+<body>
+    <div w3-include-html="navbar.html"></div>
+    <div class="container">
+        <h1 class="display-3" style="padding-right: 10px;padding-bottom: 10px;">My Timeline</h1>
+        <h1>My Account Info</h1>
+        <div class="card">
+            <div class="card-body">
+                <div class="media">
+                    <div><img class="mr-3" style="height: 50px; width: 50px;" id="profile"
+                            src="images/users/1/NoxUltima.jpg"></div>
+                    <div class="media-body">
+                        <div class="row">
+                            <div class="col">
+                                <ul class="list-unstyled fa-ul">
+                                    <li><i class="fas fa-user fa-li"></i>Username: <strong
+                                            id="username">NoxUltima</strong></li>
+                                    <li><i class="fas fa-address-card fa-li"></i>Full Name: <strong id="fullName">Noel
+                                            Cendana</strong></li>
+                                    <li><i class="fas fa-calendar-week fa-li"></i>Age: <strong id="age">16</strong></li>
+                                    <li><i class="fas fa-venus-mars fa-li"></i>Gender: <strong id="gender">Male</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col">
+                                <ul class="list-unstyled fa-ul">
+                                    <li><i class="fas fa-globe fa-li"></i>State and Country: <strong
+                                            id="countryState">Singapore,
+                                            Singapore</strong></li>
+                                    <li><i class="fas fa-map-marked-alt fa-li"></i>Address: <strong
+                                            id="address">Singapore
+                                            519964</strong></li>
+                                    <li><i class="fas fa-phone fa-li"></i>Mobile: <strong id="mobile">90171369</strong>
+                                    </li>
+                                    <li><i class="fas fa-envelope-open-text fa-li"></i>Email:
+                                        <strong id="email">noelcendana@gmail.com</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-4 text-center"><span class="fa-stack fa-lg"><i
+                                class="fas fa-star fa-stack-1x fa-inverse" style="color: rgb(0,0,0);"></i></span>
+                        <p><a href="#faves">My Favorite Restaurants</a></p>
+                    </div>
+                    <div class="col-md-4 text-center"><span class="fa-stack fa-lg"><i
+                                class="fas fa-comment fa-stack-1x fa-inverse" style="color: rgb(0,0,0);"></i></span>
+                        <p><a href="#reviews">My Posted Reviews</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="py-5">
+        <div class="container">
+            <h1 class="text-left" id="faves">My Favorite Restaurants</h1>
+            <div class="row filtr-container" id="favorites">
+                <div class="col-md-6 col-lg-4 filtr-item" data-category="2,3">
+                    <div class="card border-dark">
+                        <div class="card-header bg-dark text-light">
+                            <h5 class="m-0">Alati<br></h5>
+                        </div><img class="img-fluid card-img w-100 d-block rounded-0"
+                            src="images/restaurants/42/thumb.jpg">
+                        <div class="card-body">
+                            <p class="card-text">Cuisine: <strong>European (Greek)</strong></p>
+                            <p class="card-text">Establishment Type: <strong>Casual Dining</strong><br></p>
+                            <p class="card-text">
+                                Dining: <strong>Lunch, Dinner, Reservation, Delivery</strong><br>
+                            </p>
+                            <p class="card-text">Opening Time: <strong>12:00:00 to 00:00:00</strong><br>
+                            </p>
+                            <p class="card-text">
+                                Address: <strong>73 Amoy St, Singapore 069892</strong><br>
+                            </p>
+                            <p class="card-text">Branch: <strong>Tanjong Pagar</strong><br></p>
+                            <p class="card-text">Average Rating: <strong>3.9</strong><br></p>
+                        </div>
+                        <div class="d-flex card-footer"><button class="btn btn-dark btn-sm" type="button"><a
+                                    href="restaurants/42.html" style="color: white !important"><i class="fa fa-eye"></i>
+                                    View</a></button><button class="btn btn-outline-dark btn-sm ml-auto" type="button"
+                                onclick="window.location.href = 'timeline.html';"><i class="fa fa-plus"></i> Add
+                                to Favorites</button></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 filtr-item" data-category="2,3">
+                    <div class="card border-dark">
+                        <div class="card-header bg-dark text-light">
+                            <h5 class="m-0">Skai</h5>
+                        </div><img class="img-fluid card-img w-100 d-block rounded-0"
+                            src="images/restaurants/50/thumb.jpg">
+                        <div class="card-body">
+                            <p class="card-text">Cuisine: <strong>Local & Fusion</strong></p>
+                            <p class="card-text">Establishment Type: <strong>Casual Dining</strong><br></p>
+                            <p class="card-text">
+                                Dining: <strong>Lunch, Dinner, Reservation</strong><br></p>
+                            <p class="card-text">Opening Time: <strong>12:00:00 to 23:00:00</strong><br>
+                            </p>
+                            <p class="card-text">
+                                Address: <strong>70/F Swissotel The Stamford 2 Stamford Rd, Singapore
+                                    178882</strong><br>
+                            </p>
+                            <p class="card-text">Branch: <strong>City Hall</strong><br></p>
+                            <p class="card-text">Average Rating: <strong>4.8</strong><br></p>
+                        </div>
+                        <div class="d-flex card-footer"><button class="btn btn-dark btn-sm" type="button"><a
+                                    href="restaurants.html" style="color: white !important"><i class="fa fa-eye"></i>
+                                    View</a></button><button class="btn btn-outline-dark btn-sm ml-auto" type="button"
+                                onclick="window.location.href = 'timeline.html';"><i class="fa fa-plus"></i> Add
+                                to Favorites</button></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 filtr-item" data-category="2,3">
+                    <div class="card border-dark">
+                        <div class="card-header bg-dark text-light">
+                            <h5 class="m-0">CUT by Wolfgang Puck<br></h5>
+                        </div><img class="img-fluid card-img w-100 d-block rounded-0"
+                            src="images/restaurants/23/thumb.jpg">
+                        <div class="card-body">
+                            <p class="card-text">Cuisine: <strong>Local &amp; Fusion</strong></p>
+                            <p class="card-text">Establishment Type: <strong>Luxury Dining</strong><br></p>
+                            <p class="card-text">
+                                Dining: <strong>Lunch, Dinner, Reservation</strong><br></p>
+                            <p class="card-text">Opening Time: <strong>17:30:00 to 00:00:00</strong><br>
+                            </p>
+                            <p class="card-text">Address:
+                                <strong>#B1-71, Marina Bay Sands 2 Bayfront Ave, Singapore 018972</strong><br>
+                            </p>
+                            <p class="card-text">Branch: <strong>Marina Bay</strong><br></p>
+                            <p class="card-text">Average Rating: <strong>3.9</strong><br></p>
+                        </div>
+                        <div class="d-flex card-footer"><button class="btn btn-dark btn-sm" type="button"><a
+                                    href="restaurants/23.html" style="color: white !important"><i class="fa fa-eye"></i>
+                                    View</a></button><button class="btn btn-outline-dark btn-sm ml-auto" type="button"
+                                onclick="window.location.href = 'timeline.html';"><i class="fa fa-plus"></i> Add
+                                to Favorites</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container" id="reviews">
+        <div class="btn-group float-right" role="group">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#postReview"><i
+                    class="fas fa-comment-medical"></i> Post a Review</button>
+        </div>
+        <h1 class="text-left">My Reviews</h1>
+        <div class="container" id="userReviews">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="images/users/1/NoxUltima.jpg" class="img img-rounded img-fluid" />
+                            <p class="text-secondary text-center">20 Feb 8:20pm</p>
+                        </div>
+                        <div class="col-md-10">
+                            <p>
+                                <a class="float-left" href="timeline.html"><i class="fas fa-user-alt"></i><strong>
+                                        NoxUltima</strong></a>
+                                <h4 class="float-right">4.8 <i class="fa fa-star"></i></h4>
+                            </p>
+                            <div class="clearfix"></div>
+                            <h3>Good food!</h3>
+                            <p>This restaurant is dope. The view, the food, the service - all of them are worth it! But
+                                not
+                                to mention the cost, since I dined there alone!</p>
+                            <h5>Ratings</h5>
+                            <div class="col-md-10">
+                                <span style="font-weight: bold">Food<div class="progress">
+                                        <div class="progress-bar bg-success float-right text-center" role="progressbar"
+                                            style="width: 100%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5">5
+                                        </div>
+                                    </div></span>
+                                <span style="font-weight: bold">Service<div class="progress">
+                                        <div class="progress-bar bg-info text-center" role="progressbar"
+                                            style="width: 100%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5">5
+                                        </div>
+                                    </div></span>
+                                <span style="font-weight: bold">Ambience<div class="progress">
+                                        <div class="progress-bar bg-warning text-center" role="progressbar"
+                                            style="width: 100%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5">5
+                                        </div>
+                                    </div></span>
+                                <span style="font-weight: bold">Cost<div class="progress">
+                                        <div class="progress-bar bg-danger text-center" role="progressbar"
+                                            style="width: 80%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5">4
+                                        </div>
+                                    </div></span>
+                            </div>
+                            <br>
+                            <h5>Pictures</h5>
+                            <div class="row fbox3">
+                                <div class="col-sm-4 d-flex justify-content-center align-items-center">
+                                    <a data-fancybox="gallery" data-caption="picture 1"
+                                        href="images/restaurants/50/pic1.jpg"><img class="img-fluid"
+                                            src="images/restaurants/50/pic1.jpg" alt="picture 1"></a>
+                                </div>
+                                <div class="col-sm-4 d-flex justify-content-center align-items-center">
+                                    <a data-fancybox="gallery" data-caption="picture 2"
+                                        href="images/restaurants/50/pic2.jpg"><img class="img-fluid"
+                                            src="images/restaurants/50/pic2.jpg" alt="picture 2"></a>
+                                </div>
+                                <div class="col-sm-4 d-flex justify-content-center align-items-center">
+                                    <a data-fancybox="gallery" data-caption="picture 3"
+                                        href="images/restaurants/50/pic3.jpg"><img class="img-fluid"
+                                            src="images/restaurants/50/pic3.jpg" alt="picture 3"></a>
+                                </div>
+                            </div>
+                            <br>
+                            <p>
+                                <a class="float-right btn btn-primary text-white ml-2" data-toggle="modal"
+                                    data-target="#editReview"><i class="fa fa-edit"></i> Edit</a>
+                                <a class="float-right btn text-white btn-danger"> <i class="fa fa-times"></i> Delete</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div w3-include-html="post-review-modal.html"></div>
+    <div w3-include-html="edit-review-modal.html"></div>
+    <div w3-include-html="footer.html"></div>
+</body>
+<script>
+    w3.includeHTML();
+    // Includes other HTML files in this file
+</script>
+
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>RestoRant | Home</title>
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="css/util/bootstrap.css">
+    <link rel="stylesheet" href="css/util/animate.css">
+    <link rel="stylesheet" href="fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="fonts/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/api/colormind.js"></script>
+    <script src="js/api/countries.js"></script>
+    <script src="js/api/jquery.min.js"></script>
+    <script src="js/api/popper.min.js"></script>
+    <script src="js/api/bootstrap.bundle.js"></script>
+    <script src="js/api/w3.js"></script>
+    <script src="js/api/heading.js"></script>
+
+    <script src="js/search.js"></script>
+    <!--script src="js/user.js"></script>-->
+    <script src="js/timeline.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/restaurant.js"></script>
+    <script src="js/review.js"></script>
+    <script src="js/site.js"></script>
+
+    <script>
+        // Gets params from URL into JS functions below
+        $(document).ready(function () {
+            var username = getParameterByName("username");
+            welcome(username);
+        });
+
+        // Get parameter name from URL
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        // Welcomes the user and displays his username.
+        function welcome(username) {
+            // Set welcome message
+            if (username == null) {
+                document.getElementById("welcome").textContent = "Welcome to RestoRant!";
+            } else {
+                document.getElementById("welcome").textContent = "Welcome, " + username + "!";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div w3-include-html="navbar.html"></div>
+    <div class="carousel slide" data-ride="carousel" id="carousel-1">
+        <div class="carousel-inner" role="listbox" id="carouselImg">
+            <div class="carousel-item active"><img class="w-100 d-block" src="./images/restaurants/1/pic1.jpg"
+                    alt="Slide Image"></div>
+            <div class="carousel-item"><img class="w-100 d-block" src="./images/restaurants/2/pic1.jpg"
+                    alt="Slide Image"></div>
+            <div class="carousel-item"><img class="w-100 d-block" src="./images/restaurants/3/pic1.jpg"
+                    alt="Slide Image"></div>
+            <div class="carousel-item"><img class="w-100 d-block" src="./images/restaurants/4/pic1.jpg"
+                    alt="Slide Image"></div>
+            <div class="carousel-item"><img class="w-100 d-block" src="./images/restaurants/5/pic1.jpg"
+                    alt="Slide Image"></div>
+            <div class="carousel-item"><img class="w-100 d-block" src="./images/restaurants/6/pic1.jpg"
+                    alt="Slide Image"></div>
+            <div class="carousel-item"><img class="w-100 d-block" src="./images/restaurants/7/pic1.jpg"
+                    alt="Slide Image"></div>
+            <div class="carousel-item"><img class="w-100 d-block" src="./images/restaurants/8/pic1.jpg"
+                    alt="Slide Image"></div>
+            <div class="carousel-item"><img class="w-100 d-block" src="./images/restaurants/9/pic1.jpg"
+                    alt="Slide Image"></div>
+            <div class="carousel-item"><img class="w-100 d-block" src="./images/restaurants/10/pic1.jpg"
+                    alt="Slide Image"></div>
+        </div>
+        <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><span
+                    class="carousel-control-prev-icon"></span><span class="sr-only">Previous</span></a><a
+                class="carousel-control-next" href="#carousel-1" role="button" data-slide="next"><span
+                    class="carousel-control-next-icon"></span><span class="sr-only">Next</span></a></div>
+        <ol class="carousel-indicators" id="indicator">
+            <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-1" data-slide-to="1"></li>
+            <li data-target="#carousel-1" data-slide-to="2"></li>
+            <li data-target="#carousel-1" data-slide-to="3"></li>
+            <li data-target="#carousel-1" data-slide-to="4"></li>
+            <li data-target="#carousel-1" data-slide-to="5"></li>
+            <li data-target="#carousel-1" data-slide-to="6"></li>
+            <li data-target="#carousel-1" data-slide-to="7"></li>
+            <li data-target="#carousel-1" data-slide-to="8"></li>
+            <li data-target="#carousel-1" data-slide-to="9"></li>
+        </ol>
+    </div>
+    <div class="highlight-phone">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="intro">
+                        <h2 id="welcome">About RestoRant</h2>
+                        <p>RestoRant is simply a <strong>restaurant review</strong>&nbsp;website coded by me. It does
+                            what its name says–it’s a web-app designed for users to compliment (rave) or complain
+                            (rant) about restaurants that they have visited,
+                            and to express openly their positions and opinions about what they enjoyed or disliked in
+                            those restaurants. More restaurants will be added soon, but only if you wait!<br></p>
+                        <a class="btn btn-primary" role="button" href="about.html">Learn More</a>
+                        <a class="btn btn-primary" role="button" href="search.html">Search for a Restaurant</a>
+                        <a class="btn btn-primary" role="button" href="allRestaurants.html">See All</a>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="d-none d-md-block iphone-mockup"><img class="device" src="assets/RestoRant.png">
+                        <div class="screen"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="article-list">
+        <div class="container">
+            <div class="intro"><br><br>
+                <h1 class="text-center"><strong><em>Recommended Restaurants</em></strong></h1>
+            </div>
+        </div>
+    </div>
+    <div w3-include-html="filter.html"></div>
+    <section class="py-5">
+        <div class="container">
+            <div class="row filtr-container" id="recommended">
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <h3 class="center">Disclaimer</h3>
+        <hr>
+        <p class="center"><i>
+                This site is <b>built from scratch</b>.<br>
+                If you are seeing this message for a long time,<br>it is likely that you
+                have a JS error.<br>
+                Troubleshoot this script by using Inspect Element. <br>Use <b>Firefox or Chrome</b> to
+                render this webpage.<br>Make sure you also have XAMPP and MySQL installed.</i>
+            <hr>
+            <p class="center"> Nah, just kidding. Enjoy RestoRanting!<br></p>
+        </p>
+    </div>
+    <div w3-include-html="footer.html"></div>
+</body>
+<script>
+    w3.includeHTML();
+    // Includes other HTML files in this file
+</script>
+
+</html>
