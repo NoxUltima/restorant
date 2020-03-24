@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="802" height="194" viewBox="0 0 802 194">
+  <defs>
+    <clipPath id="clip-Web_1920_1">
+      <rect width="802" height="194"/>
+    </clipPath>
+  </defs>
+  <g id="Web_1920_1" data-name="Web 1920 – 1" clip-path="url(#clip-Web_1920_1)">
+    <rect width="802" height="194" fill="rgba(255,255,255,0)"/>
+    <g id="Group_2" data-name="Group 2" transform="translate(-198 -158)">
+      <text id="resto" transform="translate(239 198)" fill="#bc2d23" font-size="100" font-family="Kontanter-Bold, Kontanter" font-weight="700"><tspan x="0" y="95">resto</tspan></text>
+      <g id="Group_1" data-name="Group 1" transform="translate(-111 28)">
+        <rect id="Rectangle_1" data-name="Rectangle 1" width="344" height="126" transform="translate(727 164)" fill="#bc2d23"/>
+        <text id="RANT" transform="translate(747 265)" fill="#fff" font-size="100" font-family="Kontanter-Bold, Kontanter" font-weight="700"><tspan x="0" y="0">RANT</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
