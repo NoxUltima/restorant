@@ -62,9 +62,3 @@ You do not need to do steps 1-5 again.
 ![Forgot Password](screenshots/forgot.png)
 
 ![Reset Password](screenshots/reset.png)
-
-### About Page
-
-![About](screenshots/about.png)
-
-![Walkthrough](screenshots/walkthrough.png)
